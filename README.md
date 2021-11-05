@@ -13,7 +13,7 @@ void my_function() {
 	if ((error = whereami(path, PATH_MAX)) < 0) {
 		printf("error: %ld\n", error);
 	} else {
-		printf("%s\n", path); // the path to the executable library that contains the line where whereami was called
+		printf("%s\n", path); // the path to the executable/library that contains the line where whereami was called
 	}
 }
 ```
@@ -30,13 +30,13 @@ void my_function() {
 	if ((error = whereisthis(&my_function, path, PATH_MAX)) < 0) {
 		printf("error: %ld\n", error);
 	} else {
-		printf("my_function is in %s\n", path); // the path to the executable library that contains my_function
+		printf("my_function is in %s\n", path); // the path to the executable/library that contains my_function
 	}
 
 	if ((error = whereisthis(&myvar, path, PATH_MAX)) < 0) {
 		printf("error: %ld\n", error);
 	} else {
-		printf("myvar is in %s\n", path); // the path to the executable library that contains myvar
+		printf("myvar is in %s\n", path); // the path to the executable/library that contains myvar
 	}
 }
 ```
